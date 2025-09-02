@@ -1,0 +1,434 @@
+Array
+(
+    [contractVehicles] => Array
+        (
+            [0] => Array
+                (
+                    [target_name] => MDT - KAK 9695
+                    [equipment_type] => Mini Dumptruck
+                    [physical_status] => Operational
+                    [assignment] => assignment_muntinlupa
+                    [date_transferred] => 2025-06-19
+                    [date_ended] => 2025-06-23
+                    [last_updated] => 2025-08-26 11:35:33
+                    [latitude] => 13.935472
+                    [longitude] => 120.791567
+                    [days_elapsed] => 68
+                    [days_lapses] => 64
+                    [days_contract] => 4
+                    [last_updated_timestamp] => 1756179333
+                    [remarks] => Vehicle should be on QSY in 2025-06-24
+                    [source] => devices
+                    [is_updated] => 
+                    [is_overdue] => 1
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+            [1] => Array
+                (
+                    [target_name] => BT - KAJ 8866
+                    [equipment_type] => Boomtruck
+                    [physical_status] => Operational
+                    [assignment] => assignment_castillejos
+                    [date_transferred] => 2025-07-14
+                    [date_ended] => 2025-07-14
+                    [last_updated] => 2025-08-26 11:34:33
+                    [latitude] => 14.683653
+                    [longitude] => 121.02027
+                    [days_elapsed] => 43
+                    [days_lapses] => 43
+                    [days_contract] => 0
+                    [last_updated_timestamp] => 1756179273
+                    [remarks] => Vehicle should be on QSY in 2025-07-15
+                    [source] => devices
+                    [is_updated] => 
+                    [is_overdue] => 1
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+            [2] => Array
+                (
+                    [target_name] => BT - KAE 4523
+                    [equipment_type] => Boomtruck
+                    [physical_status] => Operational
+                    [assignment] => assignment_castillejos
+                    [date_transferred] => 2025-07-16
+                    [date_ended] => 2025-07-19
+                    [last_updated] => 2025-08-26 11:34:29
+                    [latitude] => 14.018915
+                    [longitude] => 120.756683
+                    [days_elapsed] => 41
+                    [days_lapses] => 38
+                    [days_contract] => 3
+                    [last_updated_timestamp] => 1756179269
+                    [remarks] => Vehicle should be on QSY in 2025-07-20
+                    [source] => devices
+                    [is_updated] => 
+                    [is_overdue] => 1
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+            [3] => Array
+                (
+                    [target_name] => SLD - KAE 6027
+                    [equipment_type] => Selfloader
+                    [physical_status] => Operational
+                    [assignment] => assignment_hermosa
+                    [date_transferred] => 2025-07-18
+                    [date_ended] => 2025-07-19
+                    [last_updated] => 2025-08-26 11:37:06
+                    [latitude] => 16.473063
+                    [longitude] => 121.11149
+                    [days_elapsed] => 39
+                    [days_lapses] => 38
+                    [days_contract] => 1
+                    [last_updated_timestamp] => 1756179426
+                    [remarks] => Vehicle should be on QSY in 2025-07-20
+                    [source] => devices
+                    [is_updated] => 
+                    [is_overdue] => 1
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+            [4] => Array
+                (
+                    [target_name] => BT - RNA 386
+                    [equipment_type] => Boomtruck
+                    [physical_status] => Operational
+                    [assignment] => assignment_quirino
+                    [date_transferred] => 2025-07-30
+                    [date_ended] => 2025-08-01
+                    [last_updated] => 2025-08-26 08:30:37
+                    [latitude] => 14.683493
+                    [longitude] => 121.020475
+                    [days_elapsed] => 27
+                    [days_lapses] => 25
+                    [days_contract] => 2
+                    [last_updated_timestamp] => 1756168237
+                    [remarks] => Vehicle should be on QSY in 2025-08-02
+                    [source] => devices
+                    [is_updated] => 
+                    [is_overdue] => 1
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+            [5] => Array
+                (
+                    [target_name] => MLT - KBE 7024
+                    [equipment_type] => Manlift
+                    [physical_status] => Operational
+                    [assignment] => assignment_calacass
+                    [date_transferred] => 2025-07-31
+                    [date_ended] => 2025-08-02
+                    [last_updated] => 2025-08-26 09:23:25
+                    [latitude] => 14.68345
+                    [longitude] => 121.020558
+                    [days_elapsed] => 26
+                    [days_lapses] => 24
+                    [days_contract] => 2
+                    [last_updated_timestamp] => 1756171405
+                    [remarks] => Vehicle should be on QSY in 2025-08-03
+                    [source] => devices
+                    [is_updated] => 
+                    [is_overdue] => 1
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+            [6] => Array
+                (
+                    [target_name] => BT - JFF 832
+                    [equipment_type] => Boomtruck
+                    [physical_status] => Operational
+                    [assignment] => assignment_taytay
+                    [date_transferred] => 2025-07-30
+                    [date_ended] => 2025-08-03
+                    [last_updated] => 2025-08-26 10:37:33
+                    [latitude] => 14.700742
+                    [longitude] => 121.015758
+                    [days_elapsed] => 27
+                    [days_lapses] => 23
+                    [days_contract] => 4
+                    [last_updated_timestamp] => 1756175853
+                    [remarks] => Vehicle should be on QSY in 2025-08-04
+                    [source] => devices
+                    [is_updated] => 
+                    [is_overdue] => 1
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+            [7] => Array
+                (
+                    [target_name] => MLT - KBF 2633
+                    [equipment_type] => Manlift
+                    [physical_status] => Operational
+                    [assignment] => assignment_dasmarinas
+                    [date_transferred] => 2025-07-12
+                    [date_ended] => 2025-08-09
+                    [last_updated] => 2025-08-26 08:32:02
+                    [latitude] => 14.311458
+                    [longitude] => 120.949867
+                    [days_elapsed] => 45
+                    [days_lapses] => 17
+                    [days_contract] => 28
+                    [last_updated_timestamp] => 1756168322
+                    [remarks] => Vehicle should be on QSY in 2025-08-10
+                    [source] => devices
+                    [is_updated] => 
+                    [is_overdue] => 1
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+            [8] => Array
+                (
+                    [target_name] => S - NAO 8227
+                    [equipment_type] => Service
+                    [physical_status] => Operational
+                    [assignment] => assignment_quirino
+                    [date_transferred] => 2025-07-01
+                    [date_ended] => 2025-08-31
+                    [last_updated] => 2025-08-26 08:33:33
+                    [latitude] => 14.619905
+                    [longitude] => 121.002408
+                    [days_elapsed] => 56
+                    [days_lapses] => 0
+                    [days_contract] => 61
+                    [last_updated_timestamp] => 1756168413
+                    [remarks] => Vehicle should be on QSY in 2025-09-01
+                    [source] => devices
+                    [is_updated] => 
+                    [is_overdue] => 
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+            [9] => Array
+                (
+                    [target_name] => CRN - KATO 55T
+                    [equipment_type] => Crane
+                    [physical_status] => Operational
+                    [assignment] => assignment_terrasolar
+                    [date_transferred] => 2025-07-04
+                    [date_ended] => 2025-09-15
+                    [last_updated] => 2025-08-26 11:34:57
+                    [latitude] => 15.324792
+                    [longitude] => 120.936212
+                    [days_elapsed] => 53
+                    [days_lapses] => 0
+                    [days_contract] => 73
+                    [last_updated_timestamp] => 1756179297
+                    [remarks] => Vehicle should be on QSY in 2025-09-16
+                    [source] => devices
+                    [is_updated] => 
+                    [is_overdue] => 
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+        )
+
+    [maintenanceVehicles] => Array
+        (
+            [0] => Array
+                (
+                    [target_name] => S - NIL 1778 (FX)
+                    [equipment_type] => Service
+                    [physical_status] => Breakdown
+                    [assignment] => assignment_bayombong
+                    [date_transferred] => 2025-08-06
+                    [date_ended] => 2026-08-06
+                    [last_updated] => 2025-08-26 08:15:46
+                    [last_updated_timestamp] => 1756167346
+                    [days_lapses] => 20
+                    [remarks] => Vehicle should be on QSY in 2026-08-07
+                    [source] => devices
+                    [is_updated] => 
+                    [is_overdue] => 1
+                    [is_breakdown] => 1
+                    [is_days_lapses_null] => 
+                )
+
+            [1] => Array
+                (
+                    [target_name] => S - NKG 5934 (P-UP)
+                    [equipment_type] => Service
+                    [physical_status] => Operational
+                    [assignment] => assignment_pinamucan
+                    [date_transferred] => 2025-01-10
+                    [date_ended] => 2025-12-31
+                    [last_updated] => 2025-08-26 11:36:46
+                    [last_updated_timestamp] => 1756179406
+                    [days_lapses] => 228
+                    [remarks] => Vehicle should be on QSY in 2026-01-01
+                    [source] => devices
+                    [is_updated] => 
+                    [is_overdue] => 1
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+            [2] => Array
+                (
+                    [target_name] => S - D1987B (TAMARAW)
+                    [equipment_type] => Service
+                    [physical_status] => Operational
+                    [assignment] => assignment_castillejos
+                    [date_transferred] => 2025-06-16
+                    [date_ended] => 2026-06-13
+                    [last_updated] => 2025-08-26 11:21:49
+                    [last_updated_timestamp] => 1756178509
+                    [days_lapses] => 71
+                    [remarks] => Vehicle should be on QSY in 2026-06-14
+                    [source] => devices
+                    [is_updated] => 
+                    [is_overdue] => 1
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+            [3] => Array
+                (
+                    [target_name] => S - D1991B (TAMARAW)
+                    [equipment_type] => Service
+                    [physical_status] => Operational
+                    [assignment] => assignment_bolo
+                    [date_transferred] => 2025-06-16
+                    [date_ended] => 2028-06-16
+                    [last_updated] => 2025-08-26 11:35:52
+                    [last_updated_timestamp] => 1756179352
+                    [days_lapses] => 71
+                    [remarks] => Vehicle should be on QSY in 2028-06-17
+                    [source] => devices
+                    [is_updated] => 
+                    [is_overdue] => 1
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+            [4] => Array
+                (
+                    [target_name] => S - D1982B (TAMARAW)
+                    [equipment_type] => Service
+                    [physical_status] => Operational
+                    [assignment] => assignment_terrasolar
+                    [date_transferred] => 2025-06-17
+                    [date_ended] => 2026-06-17
+                    [last_updated] => 2025-08-26 11:35:50
+                    [last_updated_timestamp] => 1756179350
+                    [days_lapses] => 70
+                    [remarks] => Vehicle should be on QSY in 2026-06-18
+                    [source] => devices
+                    [is_updated] => 
+                    [is_overdue] => 1
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+            [5] => Array
+                (
+                    [target_name] => S - DU904B (TAMARAW)
+                    [equipment_type] => Service
+                    [physical_status] => Operational
+                    [assignment] => assignment_castillejos
+                    [date_transferred] => 2025-06-18
+                    [date_ended] => 2026-06-18
+                    [last_updated] => 2025-08-26 10:09:17
+                    [last_updated_timestamp] => 1756174157
+                    [days_lapses] => 69
+                    [remarks] => Vehicle should be on QSY in 2026-06-19
+                    [source] => devices
+                    [is_updated] => 
+                    [is_overdue] => 1
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+            [6] => Array
+                (
+                    [target_name] => MDT - KAK 9695
+                    [equipment_type] => Mini Dumptruck
+                    [physical_status] => Operational
+                    [assignment] => assignment_muntinlupa
+                    [date_transferred] => 2025-06-19
+                    [date_ended] => 2025-06-23
+                    [last_updated] => 2025-08-26 11:35:33
+                    [last_updated_timestamp] => 1756179333
+                    [days_lapses] => 68
+                    [remarks] => Vehicle should be on QSY in 2025-06-24
+                    [source] => devices
+                    [is_updated] => 
+                    [is_overdue] => 1
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+            [7] => Array
+                (
+                    [target_name] => PC200-10M0 #C52087
+                    [equipment_type] => Backhoe
+                    [physical_status] => Operational
+                    [assignment] => assignment_castillejos
+                    [date_transferred] => 2025-06-20
+                    [date_ended] => 2025-12-30
+                    [last_updated] => 2025-08-26 11:05:50
+                    [last_updated_timestamp] => 1756177550
+                    [days_lapses] => 67
+                    [remarks] => Vehicle should be on QSY in 2025-12-31
+                    [source] => komtrax
+                    [is_updated] => 
+                    [is_overdue] => 1
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+            [8] => Array
+                (
+                    [target_name] => PC200-10M0 #C52121
+                    [equipment_type] => Backhoe
+                    [physical_status] => Operational
+                    [assignment] => assignment_castillejos
+                    [date_transferred] => 2025-06-20
+                    [date_ended] => 2025-12-30
+                    [last_updated] => 2025-08-26 08:49:20
+                    [last_updated_timestamp] => 1756169360
+                    [days_lapses] => 67
+                    [remarks] => Vehicle should be on QSY in 2025-12-31
+                    [source] => komtrax
+                    [is_updated] => 
+                    [is_overdue] => 1
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+            [9] => Array
+                (
+                    [target_name] => PC200-10M0 #C52653
+                    [equipment_type] => Backhoe
+                    [physical_status] => Operational
+                    [assignment] => assignment_castillejos
+                    [date_transferred] => 2025-06-20
+                    [date_ended] => 2025-12-30
+                    [last_updated] => 2025-08-26 08:49:20
+                    [last_updated_timestamp] => 1756169360
+                    [days_lapses] => 67
+                    [remarks] => Vehicle should be on QSY in 2025-12-31
+                    [source] => komtrax
+                    [is_updated] => 
+                    [is_overdue] => 1
+                    [is_breakdown] => 
+                    [is_days_lapses_null] => 
+                )
+
+        )
+
+    [totalContractCount] => 217
+    [totalMaintenanceCount] => 24
+    [serverTime] => 1756179959
+)

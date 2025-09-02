@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Location</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+        .leaflet-popup-content {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        .leaflet-popup-content b {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Parse URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const lat = parseFloat(urlParams.get('lat'));
+        const lng = parseFloat(urlParams.get('lng'));
+        const name = urlParams.get('name') || 'Unknown Vehicle';
+
+        // Initialize map
+        const map = L.map('map').setView([lat, lng], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Function to fetch last_updated
+        async function fetchVehicleData(targetName) {
+            try {
+                const response = await fetch(`fetch_vehicle_data.php?target_name=${encodeURIComponent(targetName)}`);
+                const data = await response.json();
+                if (data.success) {
+                    return data.last_updated;
+                } else {
+                    console.warn('Failed to fetch last_updated:', data.error);
+                    return 'Not Available';
+                }
+            } catch (error) {
+                console.error('Error fetching vehicle data:', error);
+                return 'Error';
+            }
+        }
+
+        // Add marker with popup
+        async function addMarker() {
+            if (isNaN(lat) || isNaN(lng)) {
+                alert('Invalid location data.');
+                return;
+            }
+
+            const lastUpdated = await fetchVehicleData(name);
+            const popupContent = `
+                <b>Vehicle:</b> ${name}<br>
+                <b>Latitude:</b> ${lat.toFixed(6)}<br>
+                <b>Longitude:</b> ${lng.toFixed(6)}<br>
+                <b>Last Updated:</b> ${lastUpdated}
+            `;
+
+            L.marker([lat, lng])
+                .addTo(map)
+                .bindPopup(popupContent)
+                .openPopup();
+
+            console.log('Marker added:', { name, lat, lng, last_updated: lastUpdated });
+        }
+
+        // Initialize
+        addMarker();
+    </script>
+</body>
+</html>

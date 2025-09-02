@@ -21,8 +21,8 @@ $is_main_admin = isset($_SESSION['username']) && $_SESSION['username'] === 'Lxor
     <style>
         body {
             font-family: Arial, sans-serif;
-			background: url('assets/images/Designer.jpeg') no-repeat center center fixed;
-			background-size: cover;
+            background: url('assets/images/Designer.jpeg') no-repeat center center fixed;
+            background-size: cover;
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -132,71 +132,100 @@ $is_main_admin = isset($_SESSION['username']) && $_SESSION['username'] === 'Lxor
             transform: scale(1.05);
         }
 
-        /* 🔔 Notification Styles */
-        #notification-container {
+        /* Notification Styles */
+        #notificationWrapper {
             position: absolute;
             top: 15px;
             right: 15px;
         }
 
-        #notification-btn {
-            background: none;
-            border: none;
+        #notificationIcon {
             font-size: 24px;
             cursor: pointer;
             position: relative;
         }
 
-        #notification-count {
-            background: red;
+        #notificationCount {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: red;
             color: white;
+            font-size: 10px;
+            padding: 2px 5px;
             border-radius: 50%;
-            padding: 3px 8px;
-            font-size: 14px;
-            position: absolute;
-            top: -5px;
-            right: -5px;
             display: none;
         }
 
-        #notification-dropdown {
+        #notificationDropdown {
+            display: none;
             position: absolute;
-            top: 35px;
+            top: 30px;
             right: 0;
-            width: 250px;
             background: white;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-            display: none;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-        }
-
-        .notification-item {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-            font-size: 14px;
-        }
-
-        .notification-item:last-child {
-            border-bottom: none;
-        }
-
-        .notification-footer {
-            text-align: center;
+            width: 300px;
+            max-height: 300px;
+            overflow-y: auto;
             padding: 10px;
             font-size: 14px;
+            color: #333;
+        }
+
+        #notificationDropdown a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        #notificationDropdown a.unread {
+            font-weight: bold;
+            border-left: 3px solid #ff4757;
+            background-color: #fff5f5;
+        }
+
+        #notificationDropdown a.read {
+            color: #666;
+        }
+
+        #notificationDropdown a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 450px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+            #notificationWrapper {
+                top: 10px;
+                right: 10px;
+            }
+            #notificationDropdown {
+                width: 250px;
+                right: -10px;
+            }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div id="notification-container">
-        <button id="notification-btn">
-            🔔 <span id="notification-count">0</span>
-        </button>
-        <div id="notification-dropdown"></div>
+    <!-- Notification Bell Icon -->
+    <?php if ($_SESSION['role'] === 'Main Admin') : ?>
+    <div id="notificationWrapper">
+        <div id="notificationIcon" style="cursor: pointer; position: relative;">
+            🔔
+            <span id="notificationCount">0</span>
+        </div>
+        <div id="notificationDropdown"></div>
     </div>
+    <?php endif; ?>
 
     <div class="logo-container">
         <img src="resized_logo.jpg" alt="Company Logo">
@@ -205,7 +234,7 @@ $is_main_admin = isset($_SESSION['username']) && $_SESSION['username'] === 'Lxor
     <p>Welcome, <b><?php echo htmlspecialchars($_SESSION['username']); ?></b>!</p>
 
     <div class="btn-container">
-        <a href="dashboard.php" class="btn dashboard-btn"><i class="fas fa-chart-line"></i> Go to Dashboard</a>
+        <a href="pms_due_summary.php" class="btn dashboard-btn"><i class="fas fa-chart-line"></i> Go to Dashboard</a>
         <?php if ($is_main_admin): ?>
             <a href="admin_panel.php" class="btn admin-btn"><i class="fas fa-user-shield"></i> User Management</a>
         <?php endif; ?>
@@ -214,44 +243,78 @@ $is_main_admin = isset($_SESSION['username']) && $_SESSION['username'] === 'Lxor
 </div>
 
 <script>
-function fetchNotifications() {
-    fetch('get_notifications.php')
-        .then(response => response.json())
-        .then(data => {
-            let notificationCount = data.length;
-            let notificationCountElement = document.getElementById('notification-count');
-            let notificationDropdown = document.getElementById('notification-dropdown');
+document.addEventListener('DOMContentLoaded', function () {
+    // Notification Handling (Main Admin Only)
+    const bellIcon = document.getElementById('notificationIcon');
+    const dropdown = document.getElementById('notificationDropdown');
+    const countSpan = document.getElementById('notificationCount');
+    let lastNotificationId = 0; // Track the last processed notification ID
 
-            if (notificationCount > 0) {
-                notificationCountElement.style.display = 'inline-block';
-                notificationCountElement.innerText = notificationCount;
-            } else {
-                notificationCountElement.style.display = 'none';
+    if (bellIcon && dropdown && countSpan) {
+        function updateNotifications(notifications) {
+            dropdown.innerHTML = '';
+            let unreadCount = 0;
+
+            notifications.forEach(notification => {
+                const isUnread = notification.read_status === 0;
+                if (isUnread) unreadCount++;
+                dropdown.innerHTML += `
+                    <a href="information.php?target_name=${notification.target_name}" 
+                       class="${isUnread ? 'unread' : 'read'}">
+                        ${notification.message} - ${notification.target_name} (${notification.equipment_type})
+                    </a>`;
+                lastNotificationId = Math.max(lastNotificationId, notification.id);
+            });
+
+            countSpan.textContent = unreadCount;
+            countSpan.style.display = unreadCount > 0 ? 'inline' : 'none';
+        }
+
+        // Fetch notifications via HTTP (fallback)
+        function fetchNotifications() {
+            fetch('fetch_notifications.php')
+                .then(response => response.json())
+                .then(data => updateNotifications(data))
+                .catch(error => console.error('Error fetching notifications:', error));
+        }
+
+        // Set up Server-Sent Events
+        const eventSource = new EventSource('stream_notifications.php');
+        eventSource.onmessage = function (event) {
+            const notifications = JSON.parse(event.data);
+            if (notifications.length > 0) {
+                updateNotifications(notifications);
             }
+        };
+        eventSource.onerror = function () {
+            console.error('SSE error, falling back to polling');
+            eventSource.close();
+            // Fallback to polling
+            setInterval(fetchNotifications, 10000);
+        };
 
-            notificationDropdown.innerHTML = data.map(item => `
-                <div class="notification-item">
-                    🚗 <strong>${item.license_plate_no}</strong> is overdue! 
-                    (${item.days_elapsed}/${item.days_contract} days)
-                </div>
-            `).join('');
+        bellIcon.addEventListener('click', function (event) {
+            event.stopPropagation();
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+            fetch('mark_notification_viewed.php', { method: 'POST' })
+                .then(response => response.json())
+                .then(result => {
+                    if (result.status === 'success') {
+                        fetchNotifications();
+                    }
+                })
+                .catch(error => console.error('Error marking notifications as read:', error));
+        });
 
-            if (data.length > 0) {
-                notificationDropdown.innerHTML += `<div class="notification-footer">
-                    <a href="information.php">View all</a>
-                </div>`;
+        document.addEventListener('click', function (event) {
+            if (!bellIcon.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.style.display = 'none';
             }
-        })
-        .catch(error => console.error('Error fetching notifications:', error));
-}
+        });
 
-// Fetch notifications every 10 seconds
-setInterval(fetchNotifications, 10000);
-fetchNotifications();
-
-document.getElementById('notification-btn').addEventListener('click', function () {
-    let dropdown = document.getElementById('notification-dropdown');
-    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        // Initial fetch
+        fetchNotifications();
+    }
 });
 </script>
 

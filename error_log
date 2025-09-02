@@ -1,0 +1,504 @@
+[16-May-2025 03:28:39 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:39 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:41 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:41 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:44 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:44 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:46 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:46 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:49 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:49 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:50 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:50 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:51 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:51 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:51 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:51 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:51 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:51 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:51 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:51 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:51 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:51 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:51 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:51 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:51 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:51 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:52 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:52 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:52 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:52 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:52 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:52 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:52 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:52 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:52 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:52 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:53 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:53 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:53 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:53 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:53 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:53 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:53 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:53 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:54 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:54 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:58 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:58 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:59 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:28:59 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:03 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:03 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:04 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:04 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:08 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:08 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:09 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:09 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:13 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:13 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:14 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:14 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:19 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:19 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:24 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:24 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:29 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:29 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:34 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:34 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:37 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:37 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:39 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:39 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:42 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:42 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:44 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:44 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:47 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:47 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:49 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:49 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:52 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
+[16-May-2025 03:29:52 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'days_contract' in 'order clause' in C:\xampp\htdocs\fetch_vehicles.php:98
+Stack trace:
+#0 C:\xampp\htdocs\fetch_vehicles.php(98): mysqli->prepare('\r\n    SELECT ta...')
+#1 C:\xampp\htdocs\fetch_vehicles.php(136): fetchData(Object(mysqli), '\r\n    SELECT ta...', '', Array, 10, 0)
+#2 {main}
+  thrown in C:\xampp\htdocs\fetch_vehicles.php on line 98
