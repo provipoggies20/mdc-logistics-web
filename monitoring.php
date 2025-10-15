@@ -411,7 +411,7 @@ if ($_SESSION['role'] === 'Main Admin') {
             overflow-y: auto;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             position: relative;
-            transform: translateY(-100%);
+            transform: translateY(-100%);    
             opacity: 0;
             transition: transform 0.5s ease, opacity 0.5s ease;
             border: 1px solid #e0e0e0;
