@@ -1,0 +1,756 @@
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #0078d7;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Make header sticky */
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+header nav a {
+    margin-left: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+header nav a:hover {
+    color: #0078d7;
+}
+
+header nav .login-button {
+    background-color: #0078d7;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+header nav .login-button:hover {
+    background-color: #0056b3;
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-slides .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-slides .slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+
+.hero-content {
+    /*background-color: rgba(0, 0, 0, 0.5);  Removed background, h2 has its own*/
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.hero-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff; /* Added explicit color for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added text shadow */
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #eee;  /* Slightly lighter text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content .cta-button {
+    background-color: #0078d7;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav {
+        margin-top: 10px;
+    }
+
+    header nav a {
+        margin: 10px;
+    }
+
+    .hero {
+        height: auto;
+        padding: 100px 0;
+    }
+
+    .hero-content {
+        width: 95%;
+    }
+
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+}
+
+/* New Styles for Modern Layout */
+
+.site-header {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.071);
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav .nav-link {
+    color: #495057;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active {
+    color: #007bff;
+}
+
+.site-nav .nav-button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.site-nav .nav-button:hover {
+    background-color: #0056b3;
+}
+
+.menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: #495057;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+.hero-slides .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-slides .slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.hero-content {
+    color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    max-width: 80%;
+}
+
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.hero-content .button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.content-section {
+    padding: 2rem 0;
+    background-color: #f8f9fa;
+}
+
+.content-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.about-us {
+    margin-bottom: 2rem;
+}
+
+.about-us h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.about-us p {
+    font-size: 1.1rem;
+    color: #667085;
+    line-height: 1.7;
+}
+
+.services-overview h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.service {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.071);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.service:hover {
+    transform: translateY(-0.5rem);
+}
+
+.service i {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.service h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+}
+
+.service p {
+    font-size: 1rem;
+    color: #667085;
+}
+
+.projects-showcase h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.project {
+    background-color: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.071);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.project:hover {
+    transform: translateY(-0.5rem);
+}
+
+
+.project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 1rem;
+}
+
+.project h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #667085;
+}
+
+.testimonials h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.testimonials {
+    margin-bottom: 2rem;
+}
+
+.testimonial {
+    background-color: #e9ecef;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #667085;
+    margin-bottom: 1rem;
+}
+
+.testimonial .author {
+    font-style: normal;
+    font-weight: bold;
+    color: #343a40;
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.call-to-action {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.071);
+}
+
+
+.call-to-action h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.call-to-action .button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.call-to-action .button:hover {
+    background-color: #0056b3;
+}
+
+.recent-pages{
+    margin-top: 2rem;
+}
+.recent-pages h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.recent-pages ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.recent-pages ul li{
+    margin-bottom: 0.5rem;
+}
+
+.site-footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.site-footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site-footer .footer-info {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.site-footer .footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.site-footer .social-icon {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.site-footer .social-icon:hover {
+    color: #007bff;
+}
+
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+    .site-nav {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        height: 100%;
+        width: 250px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        padding-top: 3rem;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        align-items: flex-start;
+    }
+
+    .site-nav.nav-active {
+        transform: translateX(0);
+    }
+
+    .site-nav .nav-link,
+    .site-nav .nav-button {
+        margin: 1rem 0;
+        margin-left: 2rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    header .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding-top: 80px;
+        padding-bottom: 2rem;
+    }
+
+    .hero-content {
+        width: 95%;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .projects-grid{
+        grid-template-columns: 1fr;
+    }
+    .site-footer .container {
+        flex-direction: column;
+    }
+
+    .site-footer .footer-info {
+        margin-bottom: 1rem;
+    }
+}
+
+.transparent-header {
+    background-color: transparent; /* Make the background transparent */
+    padding: 20px 0; /* Add padding for spacing */
+    box-shadow: none; /* Remove the shadow, as it might not look good with a transparent background */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.transparent-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.transparent-header h1 {
+    font-size: 24px;
+    color: #333; /* You might need to adjust this color for better visibility on your background */
+}
+
+.transparent-header nav a {
+    margin-left: 20px;
+    font-size: 16px;
+    color: #555; /* Adjust color as needed */
+}
+
+.transparent-header nav a:hover {
+    color: #0078d7;
+}
+
+.transparent-header nav .login-button {
+    background-color: #0078d7;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.transparent-header nav .login-button:hover {
+    background-color: #0056b3;
+}
+
+/* ... (existing CSS) ... */
+
+/* Styles for Recent News Section */
+.recent-news {
+    margin-top: 2rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.recent-news h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 0.5rem;
+}
+
+.news-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+}
+
+.news-item {
+    margin-bottom: 1.5rem;
+}
+
+.news-item h3 {
+    font-size: 1.5rem;
+    color: #343a40;
+    margin-bottom: 0.5rem;
+}
+
+.news-date {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 0.75rem;
+}
+
+.news-item p {
+    font-size: 1rem;
+    color: #495057;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .news-items {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+}
+
+.news-image {
+    width: 100%; /* Makes the image responsive */
+    max-width: 400px; /* Sets a maximum width for larger screens */
+    height: auto; /* Maintains the aspect ratio */
+    margin-bottom: 15px; /* Adds space below the image */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
