@@ -34,6 +34,7 @@ $assignmentMap = [
     'assignment_maasin' => 'Maasin SS',
     'assignment_muntinlupa' => 'Muntinlupa SS',
     'assignment_pantabangan' => 'Pantabangan SS',
+    'assignment_paoay' => 'Paoay TL',
     'assignment_pinamucan' => 'Pinamucan SS',
     'assignment_quirino' => 'Quirino',
     'assignment_sanjose' => 'San Jose SS',
@@ -710,6 +711,40 @@ if ($overdueResult) {
                 width: 100%;
             }
         }
+        .assignment-check-button {
+        background: linear-gradient(135deg, #17a2b8, #138496);
+        color: white;
+        border: none;
+        }
+
+        .assignment-check-button:hover {
+            background: linear-gradient(135deg, #138496, #0f6674);
+            transform: scale(1.05);
+        }
+
+        .assignment-check-button:disabled {
+            background: linear-gradient(135deg, #6c757d, #5a6268);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Loading spinner */
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #007bff;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
     </style>
 </head>
 <body>
@@ -744,6 +779,11 @@ if ($overdueResult) {
         <div class="filter-section" style="margin: 0;">
             <button id="addVehicleButton" class="edit-button">Add Vehicle</button>
         </div>
+    <?php endif; ?>
+    <?php if ($_SESSION['role'] !== 'User') : ?>
+        <button id="assignmentCheckButton" class="btn assignment-check-button">
+            🗺️ Generate Assignment Report
+        </button>
     <?php endif; ?>
 </div>
 
@@ -848,6 +888,16 @@ if ($overdueResult) {
 </div>
 
 <script>
+function closeModal() {
+        const modal = document.getElementById('vehicleModal');
+        modal.classList.remove('show');
+        document.getElementById('vehicleInfo').innerHTML = '';
+        document.getElementById('editForm').innerHTML = '';
+        document.getElementById('editForm').style.display = 'none';
+        document.getElementById('modalButtons').innerHTML = '<?php if ($_SESSION["role"] !== "User") : ?><button id="editButton" class="edit-button">Edit</button><?php endif; ?><?php if ($_SESSION["role"] === "Admin" || $_SESSION["role"] === "Main Admin") : ?><button id="deleteButton" class="delete-button">Delete</button><?php endif; ?>';
+        document.getElementById('modalTitle').innerText = 'Vehicle Information';
+        document.getElementById('messageContainer').innerHTML = '';
+    }
 document.addEventListener('DOMContentLoaded', function () {
     // Assignment mapping for JavaScript
     const assignmentMap = {
@@ -875,6 +925,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'assignment_maasin': 'Maasin SS',
         'assignment_muntinlupa': 'Muntinlupa SS',
         'assignment_pantabangan': 'Pantabangan SS',
+        'assignment_paoay': 'Paoay TL',
         'assignment_pinamucan': 'Pinamucan SS',
         'assignment_quirino': 'Quirino',
         'assignment_sanjose': 'San Jose SS',
@@ -891,16 +942,6 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.classList.add('show');
     }
 
-    function closeModal() {
-        const modal = document.getElementById('vehicleModal');
-        modal.classList.remove('show');
-        document.getElementById('vehicleInfo').innerHTML = '';
-        document.getElementById('editForm').innerHTML = '';
-        document.getElementById('editForm').style.display = 'none';
-        document.getElementById('modalButtons').innerHTML = '<?php if ($_SESSION["role"] !== "User") : ?><button id="editButton" class="edit-button">Edit</button><?php endif; ?><?php if ($_SESSION["role"] === "Admin" || $_SESSION["role"] === "Main Admin") : ?><button id="deleteButton" class="delete-button">Delete</button><?php endif; ?>';
-        document.getElementById('modalTitle').innerText = 'Vehicle Information';
-        document.getElementById('messageContainer').innerHTML = '';
-    }
 
     // Close modal when clicking outside
     window.onclick = function(event) {
@@ -1788,6 +1829,64 @@ document.addEventListener('click', function(event) {
         // Periodically refresh notifications
         setInterval(fetchNotifications, 60000); // Refresh every 60 seconds
     }
+const assignmentCheckButton = document.getElementById('assignmentCheckButton');
+if (assignmentCheckButton) {
+    assignmentCheckButton.addEventListener('click', function() {
+        assignmentCheckButton.disabled = true;
+        assignmentCheckButton.innerHTML = '🗺️ Generating Report... <span class="spinner"></span>';
+
+        fetch('generate_assignment_report.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(data => {
+                    throw new Error(data.error || 'Failed to generate report');
+                });
+            }
+            
+            // Check content type
+            const contentType = response.headers.get('content-type');
+            if (contentType && contentType.includes('application/json')) {
+                return response.json().then(data => {
+                    throw new Error(data.error || 'Failed to generate report');
+                });
+            }
+            
+            return response.blob();
+        })
+        .then(blob => {
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            
+            const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, -5);
+            a.download = `assignment_report_${timestamp}.xlsx`;
+            
+            document.body.appendChild(a);
+            a.click();
+            
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+            
+            alert('Assignment report generated successfully! Check your downloads folder.');
+            
+            assignmentCheckButton.disabled = false;
+            assignmentCheckButton.innerHTML = '🗺️ Generate Assignment Report';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error generating report: ' + error.message);
+            
+            assignmentCheckButton.disabled = false;
+            assignmentCheckButton.innerHTML = '🗺️ Generate Assignment Report';
+        });
+    });
+}
 });
 </script>
 </body>

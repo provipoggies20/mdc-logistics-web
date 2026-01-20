@@ -994,6 +994,7 @@ const assignmentDisplayMap = {
     'assignment_maasin': 'Maasin SS',
     'assignment_muntinlupa': 'Muntinlupa SS',
     'assignment_pantabangan': 'Pantabangan SS',
+    'assignment_paoay': 'Paoay TL',
     'assignment_pinamucan': 'Pinamucan SS',
     'assignment_quirino': 'Quirino',
     'assignment_sanjose': 'San Jose SS',

@@ -896,6 +896,7 @@ const assignmentMap = {
     'assignment_maasin': 'Maasin SS',
     'assignment_muntinlupa': 'Muntinlupa SS',
     'assignment_pantabangan': 'Pantabangan SS',
+    'assignment_paoay': 'Paoay TL',
     'assignment_pinamucan': 'Pinamucan SS',
     'assignment_quirino': 'Quirino',
     'assignment_sanjose': 'San Jose SS',
@@ -1898,6 +1899,7 @@ function fetchVehicleInfo(targetName) {
                                         <option value="assignment_maasin" ${inputValue === 'assignment_maasin' ? 'selected' : ''}>Maasin SS</option>
                                         <option value="assignment_muntinlupa" ${inputValue === 'assignment_muntinlupa' ? 'selected' : ''}>Muntinlupa SS</option>
                                         <option value="assignment_pantabangan" ${inputValue === 'assignment_pantabangan' ? 'selected' : ''}>Pantabangan SS</option>
+                                        <option value="assignment_paoay" ${inputValue === 'assignment_paoay' ? 'selected' : ''}>Paoay TL</option>                                        
                                         <option value="assignment_pinamucan" ${inputValue === 'assignment_pinamucan' ? 'selected' : ''}>Pinamucan SS</option>
                                         <option value="assignment_quirino" ${inputValue === 'assignment_quirino' ? 'selected' : ''}>Quirino</option>
                                         <option value="assignment_sanjose" ${inputValue === 'assignment_sanjose' ? 'selected' : ''}>San Jose SS</option>
