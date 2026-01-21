@@ -236,43 +236,44 @@ def find_nearest_assignment(device, assignment_tables, connection):
     nearest_assignment = None
     nearest_distance = float('inf')
     nearest_site = None
+    nearest_assignment_code = None
     
-    # Assignment name mapping
+    # Assignment name mapping with codes
     assignment_map = {
-        'assignment_amlan': '0528 - Amlan',
-        'assignment_balingueo': '0555 - Balingueo SS',
-        'assignment_banilad': '0301 - Banilad SS',
-        'assignment_barotac': '0547 - Barotac Viejo SS',
-        'assignment_bayombong': '0555 - Bayombong SS',
-        'assignment_binan': '0540 - Binan SS',
-        'assignment_bolo': '0565 - Bolo',
-        'assignment_botolan': '0569 - Botolan SS',
-        'assignment_cadiz': '0370 - Cadiz SS',
-        'assignment_calacass': '0313 - Calaca SS',
-        'assignment_calacatl': '0311 - Calaca TL',
-        'assignment_calatrava': '0370 - Calatrava SS',
-        'assignment_castillejos': '0557 - Castillejos TL',
-        'assignment_dasmarinas': '0540 - Dasmarinas SS',
-        'assignment_dumanjug': '0352 - Dumanjug SS',
-        'assignment_ebmagalona': '0370 - EB Magalona SS',
-        'assignment_headoffice': 'Head Office',
-        'assignment_hermosatl': '0559 - Hermosa TL',
-        'assignment_hermosa': '0555 - Hermosa SS',
-        'assignment_ilijan': '0589 - Ilijan SS',
-        'assignment_isabel': '0511 - Isabel SS',
-        'assignment_maasin': '0511 - Maasin SS',
-        'assignment_muntinlupa': '0540 - Muntinlupa SS',
-        'assignment_pantabangan': '0555 - Pantabangan SS',
-        'assignment_paoay': 'Paoay TL',
-        'assignment_pinamucan': '0546 - Pinamucan SS',
-        'assignment_quirino': 'Quirino',
-        'assignment_sanjose': '0512 - San Jose SS',
-        'assignment_tabango': '0511 - Tabango SS',
-        'assignment_tayabas': '0569 - Tayabas SS',
-        'assignment_taytay': '0555 - Taytay SS',
-        'assignment_terrasolar': 'Terra Solar',
-        'assignment_tuguegarao': '0555 - Tuguegarao SS',
-        'assignment_tuy': '0313 - Tuy SS'
+        'assignment_amlan': {'name': 'Amlan', 'code': '0528'},
+        'assignment_balingueo': {'name': 'Balingueo SS', 'code': '0000'},
+        'assignment_banilad': {'name': 'Banilad SS', 'code': '0000'},
+        'assignment_barotac': {'name': 'Barotac Viejo SS', 'code': '0000'},
+        'assignment_bayombong': {'name': 'Bayombong SS', 'code': '0555'},
+        'assignment_binan': {'name': 'Binan SS', 'code': '0000'},
+        'assignment_bolo': {'name': 'Bolo', 'code': '0565'},
+        'assignment_botolan': {'name': 'Botolan SS', 'code': '0569'},
+        'assignment_cadiz': {'name': 'Cadiz SS', 'code': '0370'},
+        'assignment_calacass': {'name': 'Calaca SS', 'code': '0313'},
+        'assignment_calacatl': {'name': 'Calaca TL', 'code': '0311'},
+        'assignment_calatrava': {'name': 'Calatrava SS', 'code': '0370'},
+        'assignment_castillejos': {'name': 'Castillejos TL', 'code': '0557'},
+        'assignment_dasmarinas': {'name': 'Dasmarinas SS', 'code': '0540'},
+        'assignment_dumanjug': {'name': 'Dumanjug SS', 'code': '0352'},
+        'assignment_ebmagalona': {'name': 'EB Magalona SS', 'code': '0370'},
+        'assignment_headoffice': {'name': 'Head Office', 'code': 'HO'},
+        'assignment_hermosatl': {'name': 'Hermosa TL', 'code': '0559'},
+        'assignment_hermosa': {'name': 'Hermosa SS', 'code': '0555'},
+        'assignment_ilijan': {'name': 'Ilijan SS', 'code': '0589'},
+        'assignment_isabel': {'name': 'Isabel SS', 'code': '0511'},
+        'assignment_maasin': {'name': 'Maasin SS', 'code': '0511'},
+        'assignment_muntinlupa': {'name': 'Muntinlupa SS', 'code': '0000'},
+        'assignment_pantabangan': {'name': 'Pantabangan SS', 'code': '0555'},
+        'assignment_paoay': {'name': 'Paoay TL', 'code': 'PAOAY'},
+        'assignment_pinamucan': {'name': 'Pinamucan SS', 'code': '0546'},
+        'assignment_quirino': {'name': 'Quirino', 'code': 'QUIRINO'},
+        'assignment_sanjose': {'name': 'San Jose SS', 'code': '0512'},
+        'assignment_tabango': {'name': 'Tabango SS', 'code': '0511'},
+        'assignment_tayabas': {'name': 'Tayabas SS', 'code': '0569'},
+        'assignment_taytay': {'name': 'Taytay SS', 'code': '0555'},
+        'assignment_terrasolar': {'name': 'Terra Solar', 'code': 'TERRA SOLAR'},
+        'assignment_tuguegarao': {'name': 'Tuguegarao SS', 'code': '0555'},
+        'assignment_tuy': {'name': 'Tuy SS', 'code': '0313'}
     }
     
     for table_name in assignment_tables:
@@ -285,12 +286,20 @@ def find_nearest_assignment(device, assignment_tables, connection):
             
             if within_fence and distance < nearest_distance:
                 nearest_distance = distance
-                nearest_assignment = assignment_map.get(table_name, table_name.replace('assignment_', '').title())
+                assignment_info = assignment_map.get(table_name, {'name': table_name.replace('assignment_', '').title(), 'code': ''})
+                nearest_assignment = assignment_info['name']
+                nearest_assignment_code = assignment_info['code']
                 nearest_site = coord_info['site']
     
     if nearest_assignment:
+        # Format with code if available
+        if nearest_assignment_code:
+            formatted_assignment = f"{nearest_assignment_code} - {nearest_assignment}"
+        else:
+            formatted_assignment = nearest_assignment
+            
         return {
-            'assignment': nearest_assignment,
+            'assignment': formatted_assignment,
             'distance': round(nearest_distance, 2),
             'site': nearest_site
         }
@@ -304,122 +313,36 @@ def find_nearest_assignment(device, assignment_tables, connection):
         }
 
 def export_to_excel(devices_with_assignments, output_file):
-    """Export data to Excel file with Equipment Type, Vehicle/Equipment, Tag, Assignment, Status, and Remarks columns"""
+    """Export data to Excel file grouped by Equipment Type and sorted by Assignment"""
     try:
-        from openpyxl.styles import Alignment, Font, Border, Side
+        from openpyxl.styles import Alignment, Font, Border, Side, PatternFill
+        from openpyxl.utils import get_column_letter
         
         # Create DataFrame
         df = pd.DataFrame(devices_with_assignments)
         
-        # Sort by Equipment Type, then by Vehicle Name
-        df = df.sort_values(['equipment_type', 'target_name'])
+        # Sort by Equipment Type first, then by Assignment
+        df = df.sort_values(['equipment_type', 'suggested_assignment', 'target_name'])
         
-        # Prepare data with Equipment Type in first column
-        export_data = []
-        current_equipment_type = None
+        # Group by equipment type
+        equipment_groups = df.groupby('equipment_type')
         
-        for _, row in df.iterrows():
-            equipment_type = row['equipment_type']
-            
-            # Use suggested_assignment as the new current_assignment
-            new_assignment = row['suggested_assignment']
-            
-            # Check if we need to add "CURRENT LOC:" prefix using cut_address
-            if new_assignment.startswith("CURRENT LOC:"):
-                new_assignment = f"CURRENT LOC: {row['cut_address']}"
-            
-            # Handle empty values - keep them empty instead of showing 'N/A'
-            tag_value = row.get('tag', '')
-            if tag_value is None or str(tag_value).strip() == '' or str(tag_value).lower() == 'none':
-                tag_value = ''
-            
-            status_value = row.get('physical_status', '')
-            if status_value is None or str(status_value).strip() == '' or str(status_value).lower() == 'none':
-                status_value = ''
-            
-            # Check days_no_gps and append "(No GPS)" to status if >= 60 days
-            days_no_gps = row.get('days_no_gps', 0)
-            try:
-                days_no_gps = int(days_no_gps) if days_no_gps is not None else 0
-            except (ValueError, TypeError):
-                days_no_gps = 0
-            
-            if days_no_gps >= 60:
-                if status_value.strip():
-                    status_value = f"{status_value} (No GPS)"
-                else:
-                    status_value = "(No GPS)"
-            
-            remarks_value = row.get('remarks', '')
-            if remarks_value is None or str(remarks_value).strip() == '' or str(remarks_value).lower() == 'none':
-                remarks_value = ''
-            
-            # Check if we should display last_gps_assignment
-            last_gps_assignment = row.get('last_gps_assignment', '')
-            if last_gps_assignment and str(last_gps_assignment).strip() and str(last_gps_assignment).lower() != 'none':
-                last_assignment_text = f"Last Assignment: {last_gps_assignment}"
-                if remarks_value.strip():
-                    remarks_value = f"{remarks_value}, {last_assignment_text}"
-                else:
-                    remarks_value = last_assignment_text
-            
-            export_data.append({
-                'Equipment Type': equipment_type if equipment_type != current_equipment_type else '',
-                'Vehicle/Equipment Name': row['target_name'],
-                'Tag': tag_value,
-                'Assignment': new_assignment,
-                'Status': status_value,
-                'Remarks': remarks_value
-            })
-            
-            current_equipment_type = equipment_type
-        
-        # Create new DataFrame with final structure
-        final_df = pd.DataFrame(export_data)
-        
-        # Create Excel writer with formatting
+        # Create Excel writer
         with pd.ExcelWriter(output_file, engine='openpyxl') as writer:
-            # Write dataframe starting from row 3 to leave room for title and headers
-            final_df.to_excel(writer, sheet_name='Vehicle Info Report', index=False, startrow=2, header=False)
-            
-            # Get workbook and worksheet objects
             workbook = writer.book
-            worksheet = writer.sheets['Vehicle Info Report']
+            worksheet = workbook.create_sheet('Vehicle Info Report', 0)
             
-            # Add title row at the top with current date and time
+            # Add title row
             current_datetime = datetime.now().strftime('%B %d, %Y at %I:%M %p')
-            worksheet.insert_rows(1)
             worksheet['A1'] = f'EQUIPMENTS / VEHICLES AS OF {current_datetime.upper()} based on GPS'
-            worksheet.merge_cells('A1:F1')
-            
-            # Add sub-headers in row 2
-            worksheet['A2'] = 'Equipment Type'
-            worksheet['B2'] = 'Equipment/Vehicle'
-            worksheet['C2'] = 'Tag'
-            worksheet['D2'] = 'Assignment'
-            worksheet['E2'] = 'Status'
-            worksheet['F2'] = 'Remarks'
+            worksheet.merge_cells('A1:G1')
             
             # Style the title
             title_cell = worksheet['A1']
             title_cell.font = Font(bold=True, size=14)
             title_cell.alignment = Alignment(horizontal='center', vertical='center')
             
-            # Style the sub-headers
-            header_font = Font(bold=True)
-            for cell in worksheet[2]:
-                cell.font = header_font
-                cell.alignment = Alignment(horizontal='center', vertical='center')
-            
-            # Set column widths
-            worksheet.column_dimensions['A'].width = 25  # Equipment type
-            worksheet.column_dimensions['B'].width = 35  # Vehicle name
-            worksheet.column_dimensions['C'].width = 20  # Tag
-            worksheet.column_dimensions['D'].width = 45  # Assignment
-            worksheet.column_dimensions['E'].width = 15  # Status
-            worksheet.column_dimensions['F'].width = 40  # Remarks
-            
-            # Merge cells for same equipment types and apply borders
+            # Define borders
             thin_border = Border(
                 left=Side(style='thin'),
                 right=Side(style='thin'),
@@ -427,49 +350,212 @@ def export_to_excel(devices_with_assignments, output_file):
                 bottom=Side(style='thin')
             )
             
-            # Apply border to title cell
+            # Define fill colors
+            yellow_fill = PatternFill(start_color='FFFF00', end_color='FFFF00', fill_type='solid')  # Yellow for headers
+            black_fill = PatternFill(start_color='000000', end_color='000000', fill_type='solid')    # Black for separator
+            white_fill = PatternFill(start_color='FFFFFF', end_color='FFFFFF', fill_type='solid')    # White for all data rows
+            
+            # Define font colors
+            red_font = Font(color='FF0000')  # Red text for breakdown
+            black_font = Font(color='000000')  # Black text for operational
+            
             title_cell.border = thin_border
+            title_cell.fill = yellow_fill
             
-            # Apply borders to header cells
-            for col_idx in range(1, 7):
-                worksheet.cell(row=2, column=col_idx).border = thin_border
+            # Set column widths
+            worksheet.column_dimensions['A'].width = 5   # TYPE
+            worksheet.column_dimensions['B'].width = 40  # EQUIPMENT/VEHICLE
+            worksheet.column_dimensions['C'].width = 20  # TAG
+            worksheet.column_dimensions['D'].width = 40  # ASSIGNMENT
+            worksheet.column_dimensions['E'].width = 15  # STATUS
+            worksheet.column_dimensions['F'].width = 50  # REMARKS
+            worksheet.column_dimensions['G'].width = 20  # SUMMARY
             
-            start_row = 3  # Data starts from row 3 now
-            current_type = None
+            current_row = 2
             
-            for row_idx in range(3, len(final_df) + 3):
-                cell_value = worksheet.cell(row=row_idx, column=1).value
+            # Process each equipment type group
+            for equipment_type, group_df in equipment_groups:
+                # Add black separator row before headers (except for first group)
+                if current_row > 2:
+                    for col_idx in range(1, 8):
+                        separator_cell = worksheet.cell(row=current_row, column=col_idx)
+                        separator_cell.fill = black_fill
+                        separator_cell.border = thin_border
+                    current_row += 1
                 
-                # Apply borders to all cells
-                for col_idx in range(1, 7):
-                    worksheet.cell(row=row_idx, column=col_idx).border = thin_border
-                    worksheet.cell(row=row_idx, column=col_idx).alignment = Alignment(
-                        vertical='center',
-                        wrap_text=True
+                # Add section header row
+                worksheet.cell(row=current_row, column=1).value = 'TYPE'
+                worksheet.cell(row=current_row, column=2).value = 'EQUIPMENT/VEHICLE'
+                worksheet.cell(row=current_row, column=3).value = 'TAG'
+                worksheet.cell(row=current_row, column=4).value = 'ASSIGNMENT'
+                worksheet.cell(row=current_row, column=5).value = 'STATUS'
+                worksheet.cell(row=current_row, column=6).value = 'REMARKS'
+                worksheet.cell(row=current_row, column=7).value = 'SUMMARY'
+                
+                # Style header row with yellow background
+                header_font = Font(bold=True)
+                for col_idx in range(1, 8):
+                    cell = worksheet.cell(row=current_row, column=col_idx)
+                    cell.font = header_font
+                    cell.alignment = Alignment(horizontal='center', vertical='center')
+                    cell.border = thin_border
+                    cell.fill = yellow_fill
+                
+                current_row += 1
+                group_start_row = current_row
+                
+                # Count statistics for this equipment type
+                total_count = 0
+                operational_count = 0
+                breakdown_count = 0
+                no_gps_count = 0
+                assignment_counts = {}
+                
+                # Add data rows for this equipment type
+                for _, row in group_df.iterrows():
+                    # Use suggested_assignment as the assignment
+                    new_assignment = row['suggested_assignment']
+                    
+                    # Check if we need to add "CURRENT LOC:" prefix using cut_address
+                    if new_assignment.startswith("CURRENT LOC:"):
+                        new_assignment = f"CURRENT LOC: {row['cut_address']}"
+                    
+                    # Handle empty values
+                    tag_value = row.get('tag', '')
+                    if tag_value is None or str(tag_value).strip() == '' or str(tag_value).lower() == 'none':
+                        tag_value = ''
+                    
+                    status_value = row.get('physical_status', '')
+                    if status_value is None or str(status_value).strip() == '' or str(status_value).lower() == 'none':
+                        status_value = ''
+                    
+                    # Check days_no_gps and append "(No GPS)" to status
+                    days_no_gps = row.get('days_no_gps', 0)
+                    try:
+                        days_no_gps = int(days_no_gps) if days_no_gps is not None else 0
+                    except (ValueError, TypeError):
+                        days_no_gps = 0
+                    
+                    if days_no_gps >= 60:
+                        no_gps_count += 1
+                        if status_value.strip():
+                            status_value = f"{status_value} (No GPS)"
+                        else:
+                            status_value = "(No GPS)"
+                    
+                    remarks_value = row.get('remarks', '')
+                    if remarks_value is None or str(remarks_value).strip() == '' or str(remarks_value).lower() == 'none':
+                        remarks_value = ''
+                    
+                    # Check if we should display last_gps_assignment
+                    last_gps_assignment = row.get('last_gps_assignment', '')
+                    if last_gps_assignment and str(last_gps_assignment).strip() and str(last_gps_assignment).lower() != 'none':
+                        last_assignment_text = f"Last Assignment: {last_gps_assignment}"
+                        if remarks_value.strip():
+                            remarks_value = f"{remarks_value}, {last_assignment_text}"
+                        else:
+                            remarks_value = last_assignment_text
+                    
+                    # Count statistics
+                    total_count += 1
+                    original_status = row.get('physical_status', '').upper()
+                    if 'OPERATIONAL' in original_status or status_value.upper().startswith('OPERATIONAL'):
+                        operational_count += 1
+                    elif 'BREAKDOWN' in original_status or 'BREAKDOWN' in status_value.upper():
+                        breakdown_count += 1
+                    
+                    # Count assignments (only if not CURRENT LOC)
+                    if not new_assignment.startswith('CURRENT LOC:'):
+                        if new_assignment in assignment_counts:
+                            assignment_counts[new_assignment] += 1
+                        else:
+                            assignment_counts[new_assignment] = 1
+                    
+                    # Write row data
+                    worksheet.cell(row=current_row, column=1).value = equipment_type
+                    worksheet.cell(row=current_row, column=2).value = row['target_name']
+                    worksheet.cell(row=current_row, column=3).value = tag_value
+                    worksheet.cell(row=current_row, column=4).value = new_assignment
+                    worksheet.cell(row=current_row, column=5).value = status_value
+                    worksheet.cell(row=current_row, column=6).value = remarks_value
+                    
+                    # Determine if this row is breakdown (for red text)
+                    is_breakdown = 'BREAKDOWN' in status_value.upper()
+                    row_font = red_font if is_breakdown else black_font
+                    
+                    # Apply borders, alignment, colors, and font
+                    for col_idx in range(1, 8):
+                        cell = worksheet.cell(row=current_row, column=col_idx)
+                        cell.border = thin_border
+                        cell.fill = white_fill  # All data rows are white
+                        cell.font = row_font    # Red text for breakdown, black for operational
+                        
+                        # Different alignment for different columns
+                        if col_idx == 1:  # TYPE column - vertical text
+                            cell.alignment = Alignment(vertical='center', text_rotation=90)
+                        elif col_idx in [4, 5]:  # ASSIGNMENT and STATUS - no wrap
+                            cell.alignment = Alignment(vertical='center', wrap_text=False)
+                        else:  # Other columns - wrap text
+                            cell.alignment = Alignment(vertical='center', wrap_text=True)
+                    
+                    current_row += 1
+                
+                # Merge TYPE column for this equipment group
+                if current_row > group_start_row:
+                    worksheet.merge_cells(start_row=group_start_row, start_column=1,
+                                        end_row=current_row-1, end_column=1)
+                    type_cell = worksheet.cell(row=group_start_row, column=1)
+                    type_cell.alignment = Alignment(
+                        horizontal='center', vertical='center', text_rotation=90
                     )
                 
-                if cell_value:  # New equipment type
-                    if current_type is not None and start_row < row_idx:
-                        # Merge previous group
-                        worksheet.merge_cells(start_row=start_row, start_column=1, 
-                                            end_row=row_idx-1, end_column=1)
-                        worksheet.cell(row=start_row, column=1).alignment = Alignment(
-                            horizontal='center', vertical='center'
-                        )
+                # Add summary row
+                summary_text = f"TOTAL: {total_count} OPERATIONAL: {operational_count} BREAKDOWN: {breakdown_count}"
+                if no_gps_count > 0:
+                    summary_text += f" NO GPS: {no_gps_count}"
+                
+                worksheet.cell(row=current_row, column=1).value = summary_text
+                worksheet.merge_cells(start_row=current_row, start_column=1,
+                                    end_row=current_row, end_column=6)
+                cell = worksheet.cell(row=current_row, column=1)
+                cell.font = Font(bold=True)
+                cell.alignment = Alignment(horizontal='left', vertical='center')
+                cell.fill = yellow_fill
+                for col_idx in range(1, 7):
+                    summary_cell = worksheet.cell(row=current_row, column=col_idx)
+                    summary_cell.border = thin_border
+                    summary_cell.fill = yellow_fill
+                
+                current_row += 1
+                
+                # Add assignment summary on the right side with merged cells
+                summary_row_start = group_start_row
+                for assignment, count in sorted(assignment_counts.items()):
+                    # Merge cells based on count (e.g., if count is 3, merge 3 cells)
+                    if count > 1:
+                        worksheet.merge_cells(start_row=summary_row_start, start_column=7,
+                                            end_row=summary_row_start + count - 1, end_column=7)
                     
-                    current_type = cell_value
-                    start_row = row_idx
+                    # Set the value and style for the merged cell
+                    summary_cell = worksheet.cell(row=summary_row_start, column=7)
+                    summary_cell.value = f"{assignment} - {count}"
+                    summary_cell.alignment = Alignment(horizontal='left', vertical='center')
+                    summary_cell.border = thin_border
+                    summary_cell.fill = white_fill
+                    
+                    # Apply borders to all cells in the merged range
+                    for row_offset in range(count):
+                        cell = worksheet.cell(row=summary_row_start + row_offset, column=7)
+                        cell.border = thin_border
+                        cell.fill = white_fill
+                    
+                    summary_row_start += count
+                
+                # Add blank row between equipment types (removed - black separator handles this)
+                # current_row += 1
             
-            # Merge last group
-            if start_row < len(final_df) + 3:
-                worksheet.merge_cells(start_row=start_row, start_column=1, 
-                                    end_row=len(final_df)+2, end_column=1)
-                worksheet.cell(row=start_row, column=1).alignment = Alignment(
-                    horizontal='center', vertical='center'
-                )
-            
-            # Freeze title and header rows
-            worksheet.freeze_panes = 'A3'
+            # Freeze panes at row 2
+            worksheet.freeze_panes = 'A2'
         
         log_message(f"Successfully exported to {output_file}")
         return True
@@ -513,40 +599,40 @@ def main():
         
         # Assignment name mapping for current assignments
         assignment_map = {
-            'assignment_amlan': '0528 - Amlan',
-            'assignment_balingueo': '0555 - Balingueo SS',
-            'assignment_banilad': '0301 - Banilad SS',
-            'assignment_barotac': '0547 - Barotac Viejo SS',
-            'assignment_bayombong': '0555 - Bayombong SS',
-            'assignment_binan': '0540 - Binan SS',
-            'assignment_bolo': '0565 - Bolo',
-            'assignment_botolan': '0569 - Botolan SS',
-            'assignment_cadiz': '0370 - Cadiz SS',
-            'assignment_calacass': '0313 - Calaca SS',
-            'assignment_calacatl': '0311 - Calaca TL',
-            'assignment_calatrava': '0370 - Calatrava SS',
-            'assignment_castillejos': '0557 - Castillejos TL',
-            'assignment_dasmarinas': '0540 - Dasmarinas SS',
-            'assignment_dumanjug': '0352 - Dumanjug SS',
-            'assignment_ebmagalona': '0370 - EB Magalona SS',
-            'assignment_headoffice': 'Head Office',
-            'assignment_hermosatl': '0559 - Hermosa TL',
-            'assignment_hermosa': '0555 - Hermosa SS',
-            'assignment_ilijan': '0589 - Ilijan SS',
-            'assignment_isabel': '0511 - Isabel SS',
-            'assignment_maasin': '0511 - Maasin SS',
-            'assignment_muntinlupa': '0540 - Muntinlupa SS',
-            'assignment_pantabangan': '0555 - Pantabangan SS',
-            'assignment_paoay': 'Paoay TL',
-            'assignment_pinamucan': '0546 - Pinamucan SS',
-            'assignment_quirino': 'Quirino',
-            'assignment_sanjose': '0512 - San Jose SS',
-            'assignment_tabango': '0511 - Tabango SS',
-            'assignment_tayabas': '0569 - Tayabas SS',
-            'assignment_taytay': '0555 - Taytay SS',
-            'assignment_terrasolar': 'Terra Solar',
-            'assignment_tuguegarao': '0555 - Tuguegarao SS',
-            'assignment_tuy': '0313 - Tuy SS'
+            'assignment_amlan': {'name': 'Amlan', 'code': '0528'},
+            'assignment_balingueo': {'name': 'Balingueo SS', 'code': '0000'},
+            'assignment_banilad': {'name': 'Banilad SS', 'code': '0000'},
+            'assignment_barotac': {'name': 'Barotac Viejo SS', 'code': '0000'},
+            'assignment_bayombong': {'name': 'Bayombong SS', 'code': '0555'},
+            'assignment_binan': {'name': 'Binan SS', 'code': '0000'},
+            'assignment_bolo': {'name': 'Bolo', 'code': '0565'},
+            'assignment_botolan': {'name': 'Botolan SS', 'code': '0569'},
+            'assignment_cadiz': {'name': 'Cadiz SS', 'code': '0370'},
+            'assignment_calacass': {'name': 'Calaca SS', 'code': '0313'},
+            'assignment_calacatl': {'name': 'Calaca TL', 'code': '0311'},
+            'assignment_calatrava': {'name': 'Calatrava SS', 'code': '0370'},
+            'assignment_castillejos': {'name': 'Castillejos TL', 'code': '0557'},
+            'assignment_dasmarinas': {'name': 'Dasmarinas SS', 'code': '0540'},
+            'assignment_dumanjug': {'name': 'Dumanjug SS', 'code': '0352'},
+            'assignment_ebmagalona': {'name': 'EB Magalona SS', 'code': '0370'},
+            'assignment_headoffice': {'name': 'Head Office', 'code': 'HO'},
+            'assignment_hermosatl': {'name': 'Hermosa TL', 'code': '0559'},
+            'assignment_hermosa': {'name': 'Hermosa SS', 'code': '0555'},
+            'assignment_ilijan': {'name': 'Ilijan SS', 'code': '0589'},
+            'assignment_isabel': {'name': 'Isabel SS', 'code': '0511'},
+            'assignment_maasin': {'name': 'Maasin SS', 'code': '0511'},
+            'assignment_muntinlupa': {'name': 'Muntinlupa SS', 'code': '0000'},
+            'assignment_pantabangan': {'name': 'Pantabangan SS', 'code': '0555'},
+            'assignment_paoay': {'name': 'Paoay TL', 'code': 'PAOAY'},
+            'assignment_pinamucan': {'name': 'Pinamucan SS', 'code': '0546'},
+            'assignment_quirino': {'name': 'Quirino', 'code': 'QUIRINO'},
+            'assignment_sanjose': {'name': 'San Jose SS', 'code': '0512'},
+            'assignment_tabango': {'name': 'Tabango SS', 'code': '0511'},
+            'assignment_tayabas': {'name': 'Tayabas SS', 'code': '0569'},
+            'assignment_taytay': {'name': 'Taytay SS', 'code': '0555'},
+            'assignment_terrasolar': {'name': 'Terra Solar', 'code': 'TERRA SOLAR'},
+            'assignment_tuguegarao': {'name': 'Tuguegarao SS', 'code': '0555'},
+            'assignment_tuy': {'name': 'Tuy SS', 'code': '0313'}
         }
         
         for idx, device in enumerate(devices, 1):
@@ -562,9 +648,15 @@ def main():
                 device, assignment_tables, connection
             )
             
-            # Map current assignment to friendly name
+            # Map current assignment to friendly name with code
             current_assignment = device.get('current_assignment', '')
-            current_assignment_display = assignment_map.get(current_assignment, current_assignment if current_assignment else 'N/A')
+            assignment_data = assignment_map.get(current_assignment, {'name': current_assignment if current_assignment else 'N/A', 'code': ''})
+            
+            # Format current assignment with code
+            if assignment_data['code']:
+                current_assignment_display = f"{assignment_data['code']} - {assignment_data['name']}"
+            else:
+                current_assignment_display = assignment_data['name']
             
             suggested_assignment = assignment_info['assignment']
             
@@ -585,8 +677,8 @@ def main():
             # 2. OR suggested assignment starts with "CURRENT LOC:" (assignment changed to unknown location)
             # 3. AND the stored last assignment is different from the current assignment (to update date)
             if current_assignment and suggested_assignment:
-                # Normalize current assignment for comparison
-                current_normalized = assignment_map.get(current_assignment, current_assignment)
+                # Normalize current assignment for comparison (use the full formatted version)
+                current_normalized = current_assignment_display
                 
                 if suggested_assignment.startswith('CURRENT LOC:'):
                     # Assignment changed to current location (outside any geofence)
